@@ -45,7 +45,7 @@ export default function GalleryPage(): ReactElement {
 
   return (
     <>
-      <Head title='Characters list' />
+      <Head title='Star Wars Encyclopedia' />
       <Container p="xl" className="flex items-center">
         <Stack justify="flex-start" align="center" gap="xl" mt="lg">
           <Center>
