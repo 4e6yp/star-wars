@@ -136,7 +136,7 @@
 			}
 		},
 		{
-			"files": ["vite.config.ts", "cypress.config.ts"],
+			"files": ["vite.config.ts"],
 			"parserOptions": {
 				"project": ["./tsconfig.node.json"]
 			}
