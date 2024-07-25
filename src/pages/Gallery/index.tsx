@@ -49,7 +49,7 @@ export default function GalleryPage(): ReactElement {
       <Container p="xl" className="flex items-center">
         <Stack justify="flex-start" align="center" gap="xl" mt="lg">
           <Center>
-            <Image src="/StarWarsLogo.png" w={400} h="auto" width={400} height={214} />
+            <Image src="/StarWarsLogo.png" w={400} h="214" width={400} height={214} />
           </Center>
           <SearchInput onValueChange={onSearchInput} />
           {
