@@ -4,6 +4,7 @@ import getCharacters from 'api/getCharacters'
 import Head from 'components/Head'
 import LoadingOrError from 'components/LoadingOrError'
 import SearchInput from 'components/SearchInput'
+import debounce from 'helpers/utils'
 import { startTransition, useMemo, useState, type ReactElement } from 'react'
 import CharactersList, { CharactersListPlaceholder } from './CharactersList'
 
@@ -23,9 +24,10 @@ export default function GalleryPage(): ReactElement {
     window.scrollTo(0, 0);
   }
 
+  const updateSearch = debounce(setSearchInput);
   const onSearchInput = (query: string) => {
     startTransition(() => {
-      setSearchInput(query);
+      updateSearch(query);
 
       if (page > 0) {
         setPage(INITIAL_PAGE);
